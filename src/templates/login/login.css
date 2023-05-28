@@ -99,17 +99,24 @@ button:hover {
   .container {
     width: 100%;
     max-width: 750px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   form {
     width: 300px;
     margin: 20px auto;
   }
-
+  input {
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
   .login {
-    width: 400px;
+    width: 500px;
     padding: 20px;
   }
 
@@ -118,27 +125,48 @@ button:hover {
   }
 
   .right img {
-    width: 100%;
-    height: 100%;
+    padding-inline: 0px;
+    display: none;
   }
+
+  .right {
+    padding-inline: 0px;
+    height: 0%;
+    width: 0%;
+    display: block;
+    margin: auto;
+  };
 }
 
 @media (max-width: 600px) {
   .container {
     max-width: 550px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-
+  input {
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
   form {
     width: 200px;
     margin: 1opx auto;
   }
   .login {
-    width: 200px;
-    padding: 10px;
+    width: 280px;
   }
   button {
     width: 200px;
   }
+  .right {
+    padding-inline: 0px;
+    height: 0%;
+    width: 0%;
+    display: block;
+    margin: auto;
+  };
 }

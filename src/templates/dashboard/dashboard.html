@@ -5,161 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="dashboard.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">Lingkar Hijau</div>
-      <nav>
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Progres">Progres</a></li>
+    <header class="app-bar">
+      <div class="app-bar__menu">
+        <button id="hamburgerButton">☰</button>
+      </div>
+      <div class="app-bar__brand">
+        <h1>Lingkar Hijau</h1>
+      </div>
+      <nav id="navigationDrawer" class="app-bar__navigation">
+        <ul style="list-style: none" class="mb-0">
           <li><a href="#Login">Logout</a></li>
-          <li><a href="#Location">Location</a></li>
         </ul>
       </nav>
     </header>
-
-    <div class="container-admin">
-      <h2 class="mt-5 mb-5">Dashboard Lingkar Hijau</h2>
-      <div class="mb-5">
+    <main>
+      <div class="container-admin">
+        <h2 class="mt-5 mb-5 display-5">Dashboard Lingkar Hijau</h2>
+        <h2 class="mt-5 mb-5">Data Relawan</h2>
         <div class="row">
-          <div class="form-group col-md-6 mb-3">
-            <label for="nama-pohon">Nama Pohon</label>
-            <input
-              type="text"
-              name="nama-pohon"
-              class="form-dash"
-              id="nama-pohon" />
+          <div class="col-12 table-responsive">
+            <table class="table table-striped" id="crudTable">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Relawan</th>
+                  <th>E-Mail</th>
+                  <th>No. Handphone</th>
+                  <th>Pesan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <th>Aldo</th>
+                  <th>aldopradana3@gmail.com</th>
+                  <th>08123456789</th>
+                  <th>Hai! saya ingin menanam beberapa pohon di daerah dekat rumah saya nih</th>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <th>Pradana</th>
+                  <th>aldoariando36@gmail.com</th>
+                  <th>08987654321</th>
+                  <th>Halo! apakah ada kontak yang dapat saya hubungi?</th>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="form-group col-md-6 mb-3">
-            <label for="jenis-pohon">Jenis Pohon</label>
-            <input
-              type="text"
-              name="jenis-pohon"
-              class="form-dash"
-              id="jenis-pohon" />
-          </div>
-          <div class="form-group col-md-6 mb-3">
-            <label for="tgl-tanam">Waktu Tanam</label>
-            <input
-              type="datetime"
-              name="tgl-tanam"
-              class="form-dash"
-              id="tgl-tanam" />
-          </div>
-          <div class="form-group col-md-6 mb-3">
-            <label for="habitat-pohon">Habitat</label>
-            <input
-              type="text"
-              name="habitat-pohon"
-              class="form-dash"
-              id="habitat-pohon" />
-          </div>
-          <div class="form-group col-md-6 mb-3">
-            <label for="umur-pohon">Umur</label>
-            <input
-              type="number"
-              name="umur-pohon"
-              class="form-dash"
-              id="umur-pohon" />
-          </div>
-          <div class="form-group col-md-6 mb-3">
-            <label for="desc-pohon">Deskripsi</label>
-            <input
-              type="text"
-              name="desc-pohon"
-              class="form-dash"
-              id="desc-pohon" />
+        </div>
+        <h2 class="mt-5 mb-5">Progress Pohon</h2>
+        <div class="mb-5">
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label for="nama-pohon">Nama Relawan</label>
+              <input type="text" name="nama-relawan" class="form-dash" id="nama-relawan" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="jenis-pohon">Jenis Pohon</label>
+              <input type="text" name="jenis-pohon" class="form-dash" id="jenis-pohon" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="tgl-tanam">Tanggal Penanaman</label>
+              <input type="datetime" name="tgl-tanam" class="form-dash" id="tgl-tanam" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="habitat-pohon">Lokasi</label>
+              <input type="text" name="lokasi-pohon" class="form-dash" id="lokasi-pohon" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="umur-pohon">Jumlah Pohon</label>
+              <input type="number" name="jumlah-pohon" class="form-dash" id="jumlah-pohon" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="desc-pohon">Umur Pohon</label>
+              <input type="number" name="umur-pohon" class="form-dash" id="umur-pohon" />
+            </div>
+
+            <div class="col-lg-12 mt-5">
+              <button class="btn btn-success" id="Submit" onclick="AddData()">Add Data</button>
+              <button class="btn btn-primary" id="Update" onclick="AddData()">Update</button>
+            </div>
           </div>
 
-          <div class="col-lg-12 mt-5">
-            <button class="btn btn-success" id="Submit" onclick="AddData()">
-              Add Data
-            </button>
-            <button class="btn btn-primary" id="Update" onclick="AddData()">
-              Update
-            </button>
+          <hr />
+          <div class="row mt-5">
+            <div class="col-12 table-responsive">
+              <table class="table table-striped table-bordered" id="crudTable">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama Relawan</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah</th>
+                    <th>Jenis Pohon</th>
+                    <th>Lokasi</th>
+                    <th>Umur</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <th>Aldo</th>
+                    <th>12 Juni 2023</th>
+                    <th>100</th>
+                    <th>Pohon Karet</th>
+                    <th>Bandung</th>
+                    <th>2 tahun</th>
+                    <th><button type="button" class="btn btn-success">Edit</button> <button type="button" class="btn btn-danger">Hapus</button></th>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <th>Pradana</th>
+                    <th>21 Juni 2023</th>
+                    <th>50</th>
+                    <th>Pohon Jati</th>
+                    <th>Lamongan</th>
+                    <th>3 tahun</th>
+                    <th><button type="button" class="btn btn-success">Edit</button> <button type="button" class="btn btn-danger">Hapus</button></th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-
-      <hr />
-      <div class="row mt-5">
-        <div class="col-12">
-          <table class="table table-bordered" id="crudTable">
-            <thead>
-              <tr>
-                <th>Nama Pohon</th>
-                <th>Jenis</th>
-                <th>Waktu Tanam</th>
-                <th>Habitat</th>
-                <th>Umur</th>
-                <th>Deskripsi</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- </div>
-          <table>
-            <tr>
-              <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
-                  <div>
-                    <label for="nama-pohon">Nama Pohon</label>
-                    <input type="text" name="nama-pohon" id="nama-pohon" />
-                  </div>
-                  <div>
-                    <label for="jenis-pohon">Jenis Pohon</label>
-                    <input type="text" name="jenis-pohon" id="jenis-pohon" />
-                  </div>
-                  <div>
-                    <label for="tgl-tanam">Waktu Penanaman Pohon</label>
-                    <input type="datetime" name="tgl-tanam" id="tgl-tanam" />
-                  </div>
-                  <div>
-                    <label for="habitat-pohon">Habitat</label>
-                    <input type="text" name="habitat-pohon" id="habitat-pohon" />
-                  </div>
-                  <div>
-                    <label for="umur-pohon">Umur Pohon</label>
-                    <input type="number" name="umur-pohon" id="umur-pohon" />
-                  </div>
-                  <div>
-                    <label for="desc-pohon">Deskripsi Pohon</label>
-                    <input type="text" name="desc-pohon" id="desc-pohon" />
-                  </div>
-      
-                  <div class="form-action-button"> 
-                    <input type="submit" value="submit" />
-                    <input type="reset" value="reset" />
-                  </div>
-                </form>
-      
-                <td>
-                  <table class="list" id="admin-list">
-                    <thead>
-                      <tr>
-                        <th>Nama</th>
-                        <th>Jenis</th>
-                        <th>Habitat </th>
-                        <th>Waktu Penanaman</th>
-                        <th>Umur</th>
-                        <th>Deskripsi</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </td>
-              </td>
-            </tr>
-          </table> -->
+    </main>
+    <script src="dashboard.js"></script>
   </body>
 </html>
