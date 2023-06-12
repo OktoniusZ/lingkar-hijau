@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.list.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.list.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel {
+  list-style-type: none;
+}
+
+.list-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  list-style: none;
+  background: #fff;
+}
+.button-pohon {
+  width: 100%;
+  background-color: #6bae98;
+  color: #fff;
+  border: transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 44px;
+  font-size: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.pohon-preview {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+.preview::-webkit-scrollbar {
+  display: none;
+}
+.preview {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.pohon-preview.active {
+  display: flex;
+}
+.list-gambar {
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.list-gambar img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+.list-gambar-2 {
+  width: 60%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.list-gambar-2 img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.list-nama {
+  font-size: 24px;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+.list-nama-2 {
+  font-size: 28px;
+  padding-bottom: 8px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.list-habitat-2 {
+  padding-bottom: 8px;
+}
+.list-umur {
+  font-size: 20px;
+}
+.list-deskripsi {
+  padding-bottom: 8px;
+}
+.close-button {
+  cursor: pointer;
+  font-size: 30px;
+  background-color: transparent;
+  border: transparent;
+  padding-inline: 20px;
+  padding-bottom: 10px;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+::-webkit-scrollbar {
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d2;
+}
