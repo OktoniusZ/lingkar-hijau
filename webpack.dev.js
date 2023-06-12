@@ -1,5 +1,5 @@
-const { merge } = require('webpack-merge');
 const path = require('path');
+const {merge} = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -8,7 +8,7 @@ module.exports = merge(common, {
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     open: true,
-    port: 8000,
+    port: 9001,
     client: {
       overlay: {
         errors: true,
