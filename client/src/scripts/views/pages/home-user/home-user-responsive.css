@@ -1,0 +1,398 @@
+/* Responsive */
+@media screen and (max-width: 652px){
+    .navbar {
+      display: none;
+    }
+  
+    .mobile-menu {
+      top: 0;
+      position: fixed;
+      z-index: 999999;
+    }
+  
+    .nav-mobile {
+      display: flex !important;
+      top: 3em;
+      z-index: 9;
+      width: 50%;
+      position: fixed;
+      -webkit-transform: translate(-100%, 0);
+      transform: translate(-110%, 0);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-item a {
+      transition: all .2s ease-in-out;
+    }
+  
+    .nav-item a:active{
+      transform: scale(0.9, 0.9);
+      color: #4A947B;
+    }
+  
+    .open {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  
+    .nav-mob-item {
+        display: list-item;
+        text-align: center;
+        width: 100%;
+    }
+  
+    .jumbotron {
+      min-height: 700px;
+    }
+  
+    .jumbotron-title h1 {
+      font-weight: 700;
+      font-size: 25px;
+      color: #77C9A5;
+    }
+    
+    .jumbotron-title p {
+      font-size: 18px;
+      width: auto;
+      padding-inline: 10px;
+      color: #ffffff;
+    }
+    
+    .jumbotron-img img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .slogan-title {
+      text-align: center;
+      width: auto;
+      margin-inline: 20px;
+    }
+    
+    .slogan-title h2 {
+      font-weight: 600;
+      font-size: 20px !important;
+      margin-block: 20px;
+    }
+    
+    .slogan-title p {
+      font-weight: 400;
+      font-size: 15px !important;
+      margin-block: 20px;
+    }
+  
+    .slogan-icon {
+      display: grid;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+    }
+  
+    .slogan-list-type-one, .slogan-list-type-two {
+      width: 170px !important;
+      height: 80px !important;
+    }
+  
+    .slogan-list-type-one img {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  
+    .slogan-list-type-two img {
+      width: 25px !important;
+      height: 25px !important;
+    }
+    
+    .slogan-list-type-one h3 {
+      font-weight: 600 !important;
+      font-size: 15px !important;
+    }
+  
+    .slogan-list-type-two h3 {
+      font-weight: 600 !important;
+      font-size: 15px !important;
+    }
+    
+    .slogan-list-type-one p {
+      font-weight: 500 !important;
+      font-size: 10px !important;
+    }
+  
+    .slogan-list-type-two p {
+      font-weight: 500 !important;
+      font-size: 10px !important;
+    }
+  
+    .footer-profile-card {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  
+    .footer-title {
+      text-align: left;
+      padding-inline: 0px !important;
+    }
+  
+    .intro-card-container {
+      grid-template-columns: repeat(1, 1fr) !important;
+      grid-row-gap: 0px !important;
+      grid-column-gap: 0px !important;
+    }
+
+    .list {
+        grid-auto-columns: calc((100% / 1) - 12px);
+      }
+      .close-button {
+        padding-inline: 15px;
+        margin: 8px;
+      }
+      .list-nama-2 {
+        padding-top: 32px;
+      }
+      .list-umur {
+        font-size: 17px;
+      }
+      .list-gambar-2 {
+        width: 80%;
+    }
+
+    .list-nama {
+        font-size: 20px;
+        padding-bottom: 8px;
+        font-weight: 600;
+      }
+
+    .list-umur {
+        font-size: 15px;
+    }
+
+    .list-habitat p {
+        font-size: 15px;
+      }
+
+    .tree h2 {
+        font-size: 17px !important;
+    }
+      
+    .tree p {
+        font-size: 13px !important;
+    }
+      
+    .intro-title h2 {
+        font-size: 17px !important;
+    }
+
+    .container__map h2 {
+        font-size: 17px !important;
+      }
+
+      .container__map p {
+        font-size: 13px !important;
+      }
+  }
+  
+  @media screen and (min-width: 661px) {
+    .mobile-menu {
+      display: none;
+    }
+  
+    .nav-mobile {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .nav-list ul{
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .navbar{
+      flex-direction: column;
+    }
+  
+    .nav-list ul{
+      flex-wrap: wrap;
+      column-gap: .5rem;
+    }
+  
+    .nav-mobile {
+      display: none;
+    }
+  
+    .jumbotron {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+  
+    .jumbotron-title {
+      text-align: center;
+    }
+  
+    .slogan {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .slogan-title h2 {
+      font-weight: 600;
+      font-size: 25px;
+      margin-block: 20px;
+    }
+    
+    .slogan-title p {
+      font-weight: 400;
+      font-size: 18px;
+      margin-block: 20px;
+    }
+  
+    .slogan-icon {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+    }
+  
+    .slogan-list-type-one, .slogan-list-type-two {
+      width: 270px;
+      height: 150px;
+    }
+  
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .footer-title {
+      text-align: center;
+      margin-block: 50px;
+      margin-inline: 50px;
+    }
+  
+    .footer-title p {
+      width: auto;
+      padding-inline: 30px;
+    }
+  
+    .footer-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .intro-card-container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+    }
+  
+    .intro-card {
+      padding: 15px;
+    }
+  
+    .intro-card h3 {
+      font-weight: 600;
+      line-height: 24px;
+      font-size: 15px;
+    }
+    
+    .intro-card p {
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    .list {
+        grid-auto-columns: calc((100% / 3) - 12px);
+      }
+
+    .tree h2 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+      
+    .tree p {
+        text-align: center;
+        font-size: 15px;
+    }
+      
+    .intro-title h2 {
+        font-size: 20px;
+    }
+
+    .map {
+        width: 500px;
+        height: 220px;
+        margin-inline: 20px;
+      }
+      .container__map h2 {
+        margin-inline: 20px;
+        font-size: 20px;
+      }
+      .container__map p {
+        margin-inline: 20px;
+        font-size: 15px;
+      }
+      .button__map {
+        font-size: 14px;
+        line-height: 35px;
+      }
+
+    .contact-img {
+        display: none;
+    }
+
+    .contact-form h1 {
+        text-align: center;
+    }
+      
+  }
+
+  @media screen and (max-width: 500px) {
+    .list {
+      grid-auto-columns: calc((100% / 1) - 12px);
+    }
+
+    .list-nama {
+        font-size: 25px;
+        padding-bottom: 8px;
+        font-weight: 600;
+      }
+
+    .list-umur {
+        font-size: 15px;
+    }
+
+    .list-habitat p {
+        font-size: 15px;
+      }
+
+    .contact-form {
+        width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .slogan-icon {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+      }
+
+      .slogan-list-type-two {
+        background-color: #194D40;
+      }
+    .contact-form {
+        width: 200px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+  }
