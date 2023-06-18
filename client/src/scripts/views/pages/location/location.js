@@ -3,7 +3,7 @@ fetch('/relawan')
     .then((response) => response.json())
     .then((data) => {
       data.forEach((data) => {
-        cardMap.innerHTML = `
+        cardMap.innerHTML += `
         <div class="card">
           <div class="name-card">
             <h2>Nama Relawan<br></h2>
