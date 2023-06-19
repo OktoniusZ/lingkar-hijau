@@ -38,18 +38,11 @@ app.use(express.static(imagesPath));
 app.use(express.static(distPath));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  
-const expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
 app.use(
     session({
-       name: 'session',
-       keys: ['key1', 'key2'],
-       cookie: {
-        secure: true,
-        httpOnly: true,
-        domain: 'https://lingkar-hijau-gamma.vercel.app',
-        path: 'foo/bar',
-        expires: expiryDate
-       }
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
     }),
 )
 
