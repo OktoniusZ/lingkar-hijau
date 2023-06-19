@@ -113,7 +113,7 @@ mongoose.set('strictQuery', false)
 mongoose.connect(process.env.MONGODB_URL)
 .then(() => {
     console.log('Connected to mongodb')
-    app.listen(port, () => {
+    server.listen(port, () => {
         console.log(`Linkar Hijau Berjalan pada ${host}:${port}`)
     })
 })
