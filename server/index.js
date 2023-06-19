@@ -1,7 +1,6 @@
 // konfigurasi
 const express = require('express')
 const bodyParser = require('body-parser');
-const cookie = require('cookie-session')
 const app = express()
 const path = require('path')
 const mongoose = require('mongoose')
@@ -40,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
+        secret: 'my secret key',
         resave: false,
         saveUninitialized: false,
     }),
