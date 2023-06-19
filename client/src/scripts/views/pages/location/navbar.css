@@ -134,6 +134,7 @@ body {
   background-color: #ffffff;
   font-weight: 500;
   font-size: 18px;
+  z-index: 9999999;
 }
 
 .nav-mobile a {
@@ -208,7 +209,7 @@ body {
     .nav-mobile {
       display: flex !important;
       top: 3em;
-      z-index: 9;
+      z-index: 999999;
       width: 50%;
       position: fixed;
       -webkit-transform: translate(-100%, 0);
