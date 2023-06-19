@@ -8,5 +8,5 @@ Our Contributor:
 3. Oktonius Zevanya Simanungkalit - [Active]
 4. Aldo Pradana Ariando - [Active]
 
-Check our Website Below
+Check our website here : 
 [Lingkar Hijau](lingkar-hijau-gamma.vercel.app)
