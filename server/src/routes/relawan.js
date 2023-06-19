@@ -46,6 +46,10 @@ router.post('/', async(req,res) => {
 router.get('/', async(req,res) => {
     await Relawan.find({})
     .then((users) => {
+        req.session.message = {
+            type: 'success',
+            message: 'user added successfully'
+        };
         res.json((users))
     })
     .catch((err) =>{
@@ -70,6 +74,10 @@ router.get('/edit/:id', (req,res) => {
     let id = req.params.id;
     Relawan.findById(id)
     .then((support) => {
+        req.session.message = {
+            type: 'success',
+            message: 'user added successfully'
+        };
         res.json((support))
         // res.redirect('/edit-dashboard')
     })
