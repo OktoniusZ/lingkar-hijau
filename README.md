@@ -9,4 +9,4 @@ Our Contributor:
 4. Aldo Pradana Ariando - [Active]
 
 Check our website here : 
-[Lingkar Hijau](lingkar-hijau-gamma.vercel.app)
+[Lingkar Hijau](https://lingkar-hijau-gamma.vercel.app/)
