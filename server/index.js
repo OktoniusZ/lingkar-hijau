@@ -110,10 +110,10 @@ const host = process.env.HOST || '0.0.0.0'
 const server = http.createServer(app);
 // database connection
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb+srv://f039xb384:lingkarhijau123@lingkar-hijau.pxwcbij.mongodb.net/lingkarhijau?retryWrites=true&w=majority ')
+mongoose.connect(process.env.MONGODB_URL)
 .then(() => {
     console.log('Connected to mongodb')
-    app.listen('3000', () => {
+    app.listen(port, () => {
         console.log(`Linkar Hijau Berjalan pada ${host}:${port}`)
     })
 })
