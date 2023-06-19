@@ -13,7 +13,7 @@
     .nav-mobile {
       display: flex !important;
       top: 3em;
-      z-index: 9;
+      z-index: 999999;
       width: 50%;
       position: fixed;
       -webkit-transform: translate(-100%, 0);
