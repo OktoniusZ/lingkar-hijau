@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: #ffffff;
+}
+/* navabr admin */
+.app-bar {
+  padding: 8px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+ 
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+ 
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 14px;
+  cursor: pointer;
+}
+ 
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+ 
+.app-bar .app-bar__brand h1 {
+  color: #08764c;
+  font-family: 'Rancho', sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-top: 10px;
+}
+ 
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 70px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  background-color: #ffffff;
+  display: flex;
+}
+ 
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+ 
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #08764c;
+  padding: 12px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.container-admin {
+  padding-top: 100px;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.container-admin h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #4A947B;
+}
+
+.row {
+  display: flex;
+}
+
+tbody th {
+  font-weight: 400;
+}
+
+label {
+  font-weight: 600;
+}
+
+.form-dash {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  padding-inline: 10px;
+}
+
+.form-dash::-webkit-input-placeholder {
+  color: #cecece;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 660px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+ 
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+ 
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+ 
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+ 
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+ 
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
