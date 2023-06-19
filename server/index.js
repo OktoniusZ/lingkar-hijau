@@ -45,7 +45,10 @@ app.use(
     session({
         secret: process.env.SESSION_SECRET,
         resave: false,
-        saveUninitialized: false,
+        saveUninitialized: true,
+        cookie: {
+            secure: false,
+        }
     }),
 )
 
@@ -66,21 +69,17 @@ passport.serializeUser((user, done) => {
 })
 
 passport.deserializeUser((id, done) => {
-    if(id === 1){
-        done(null, {id:1, username: 'admin'})
-    } else {
-        // Dapatkan data pengguna dari basis data berdasarkan id dan kembalikan dalam format yang sesuai
-        User.findById(id, (err, user) => {
-            if (err) {
-                return done(err);
-            }
-            if (!user) {
-                return done(new Error('user not found'));
-            }
-            done(null, user);
-        });
+  User.findById(id, (err, user) => {
+    if (err) {
+      return done(err);
     }
-})
+    if (!user) {
+      return done(new Error('User not found'));
+    }
+    done(null, user);
+  });
+});
+
 app.use(flash());
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/dashboard',
