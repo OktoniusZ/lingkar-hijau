@@ -49,6 +49,9 @@ app.use(
     }),
 )
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 // session
 passport.use(new LocalStrategy((username, password, done) => {
     if(username === 'admin' && password === 'password') {
@@ -57,9 +60,6 @@ passport.use(new LocalStrategy((username, password, done) => {
         return done(null, false, { message: 'Incorrect username' });
     }
 }))
-
-app.use(passport.initialize())
-app.use(passport.session())
 
 passport.serializeUser((user, done) => {
     done(null, user.id)
