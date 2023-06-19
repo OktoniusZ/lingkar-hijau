@@ -40,18 +40,11 @@ app.use(bodyParser.json())
 app.use(
     session({
         secret: 'my secret key',
-        saveUninitialized: false,
         resave: false,
-        name: 'MyCoolWebAppCookieName',
-        cookie: {
-            secure: true,
-            httpOnly: false,
-            sameSite: 'none'
-        }
+        saveUninitialized: false,
     }),
-    
-
 )
+app.set("trust proxy", 1);
 
 // session
 app.use(passport.initialize())
