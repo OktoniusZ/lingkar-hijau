@@ -95,6 +95,11 @@ main {
   width: 700px;
   height: 420px
 }
+
+.main-map {
+  margin-block: 100px;
+}
+
 .content__map {
   display: flex;
   justify-content: center;
@@ -120,6 +125,10 @@ main {
     width: 500px;
     height: 220px;
     margin-inline: 20px;
+  }
+
+  .main-map {
+    margin-block: 150px;
   }
 
   .container__map {
