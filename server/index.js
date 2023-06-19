@@ -10,7 +10,6 @@ const LocalStrategy = require('passport-local').Strategy;
 require('dotenv').config()
 var flash = require('connect-flash');
 const http = require('http')
-const cors = require('cors')
 
 // routes
 const relawan = require('./src/routes/relawan')
@@ -26,15 +25,12 @@ const location = require('./src/controller/location.controller')
 const informationPage = require('./src/controller/information.controller')
 const login = require('./src/controller/login.controller')
 
-// modul
-const User = require('./src/model/User')
 
 // middleware
 const distPath = path.join(__dirname, '../client/src/scripts/views/pages/home-user');
 const herosPath = path.join(__dirname, '../client/src/public/heros');
 const iconsPath = path.join(__dirname, '../client/src/public/icons');
 const imagesPath = path.join(__dirname, '../client/src/public/images');
-app.use(cors());
 app.use(express.static(herosPath));
 app.use(express.static(iconsPath));
 app.use(express.static(imagesPath));
@@ -50,6 +46,9 @@ app.use(
 )
 
 // session
+app.use(passport.initialize())
+app.use(passport.session())
+
 passport.use(new LocalStrategy((username, password, done) => {
     if(username === 'admin' && password === 'password') {
         return done(null, { id: 1, username: 'admin' });
@@ -57,9 +56,6 @@ passport.use(new LocalStrategy((username, password, done) => {
         return done(null, false, { message: 'Incorrect username' });
     }
 }))
-
-app.use(passport.initialize())
-app.use(passport.session())
 
 passport.serializeUser((user, done) => {
     done(null, user.id)
@@ -69,16 +65,7 @@ passport.deserializeUser((id, done) => {
     if(id === 1){
         done(null, {id:1, username: 'admin'})
     } else {
-        // Dapatkan data pengguna dari basis data berdasarkan id dan kembalikan dalam format yang sesuai
-        User.findById(id, (err, user) => {
-            if (err) {
-                return done(err);
-            }
-            if (!user) {
-                return done(new Error('user not found'));
-            }
-            done(null, user);
-        });
+        done(new Error('user not found'))
     }
 })
 app.use(flash());
@@ -112,20 +99,11 @@ app.use('/register', register)
 app.use('/edit/:id', editDashboard)
 app.use('/support', support)
 app.use('/location', location)
-app.get('/dashboard', (req, res, next) => {
-    if (req.isAuthenticated()) {
-      next();
-    } else {
-      res.redirect('/login');
-    }
-})
 app.use('/dashboard', isAuthenticated, dashboard)
 app.use('/login', login)
 app.get('/logout', (req,res) => {
     res.redirect('/login')
 })
-
-
 
 const port = process.env.PORT || 5000;
 const host = process.env.HOST || '0.0.0.0'
@@ -142,4 +120,3 @@ mongoose.connect(process.env.MONGODB_URL)
 .catch((err) => {
     console.log(err)
 })
-
