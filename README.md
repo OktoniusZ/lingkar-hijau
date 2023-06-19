@@ -1,7 +1,7 @@
 # Lingkar Hijau
 
 Our Contributor:
-Kuncoro Ariadi - [Active]
-Amalia Nur Izzati - [Active]
-Oktonius Zevanya Simanungkalit - [Active]
-Aldo Pradana Ariando - [Active]
+1. Kuncoro Ariadi - [Active]
+2. Amalia Nur Izzati - [Active]
+3. Oktonius Zevanya Simanungkalit - [Active]
+4. Aldo Pradana Ariando - [Active]
