@@ -44,7 +44,6 @@ app.use(
         saveUninitialized: false,
     }),
 )
-app.set("trust proxy", 1);
 
 // session
 app.use(passport.initialize())
