@@ -41,8 +41,16 @@ app.use(
     session({
         secret: 'my secret key',
         saveUninitialized: false,
-        resave: false
-    })
+        resave: false,
+        name: 'MyCoolWebAppCookieName',
+        cookie: {
+            secure: true,
+            httpOnly: false,
+            sameSite: 'none'
+        }
+    }),
+    
+
 )
 
 // session
