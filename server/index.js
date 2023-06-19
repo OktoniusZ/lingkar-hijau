@@ -10,6 +10,7 @@ const LocalStrategy = require('passport-local').Strategy;
 require('dotenv').config()
 var flash = require('connect-flash');
 const http = require('http')
+const cors = require('cors')
 
 // routes
 const relawan = require('./src/routes/relawan')
@@ -25,12 +26,15 @@ const location = require('./src/controller/location.controller')
 const informationPage = require('./src/controller/information.controller')
 const login = require('./src/controller/login.controller')
 
+// modul
+const User = require('./src/model/User')
 
 // middleware
 const distPath = path.join(__dirname, '../client/src/scripts/views/pages/home-user');
 const herosPath = path.join(__dirname, '../client/src/public/heros');
 const iconsPath = path.join(__dirname, '../client/src/public/icons');
 const imagesPath = path.join(__dirname, '../client/src/public/images');
+app.use(cors());
 app.use(express.static(herosPath));
 app.use(express.static(iconsPath));
 app.use(express.static(imagesPath));
@@ -39,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  
 app.use(
     session({
-        secret: 'my secret key',
+        secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
     }),
@@ -65,7 +69,16 @@ passport.deserializeUser((id, done) => {
     if(id === 1){
         done(null, {id:1, username: 'admin'})
     } else {
-        done(new Error('user not found'))
+        // Dapatkan data pengguna dari basis data berdasarkan id dan kembalikan dalam format yang sesuai
+        User.findById(id, (err, user) => {
+            if (err) {
+                return done(err);
+            }
+            if (!user) {
+                return done(new Error('user not found'));
+            }
+            done(null, user);
+        });
     }
 })
 app.use(flash());
