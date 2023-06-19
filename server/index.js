@@ -45,12 +45,9 @@ app.use(
     session({
         secret: process.env.SESSION_SECRET,
         resave: false,
-        saveUninitialized: true,
+        saveUninitialized: false,
     }),
 )
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 // session
 passport.use(new LocalStrategy((username, password, done) => {
@@ -61,22 +58,29 @@ passport.use(new LocalStrategy((username, password, done) => {
     }
 }))
 
+app.use(passport.initialize())
+app.use(passport.session())
+
 passport.serializeUser((user, done) => {
     done(null, user.id)
 })
 
 passport.deserializeUser((id, done) => {
-  User.findById(id, (err, user) => {
-    if (err) {
-      return done(err);
+    if(id === 1){
+        done(null, {id:1, username: 'admin'})
+    } else {
+        // Dapatkan data pengguna dari basis data berdasarkan id dan kembalikan dalam format yang sesuai
+        User.findById(id, (err, user) => {
+            if (err) {
+                return done(err);
+            }
+            if (!user) {
+                return done(new Error('user not found'));
+            }
+            done(null, user);
+        });
     }
-    if (!user) {
-      return done(new Error('User not found'));
-    }
-    done(null, user);
-  });
-});
-
+})
 app.use(flash());
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/dashboard',
@@ -108,11 +112,20 @@ app.use('/register', register)
 app.use('/edit/:id', editDashboard)
 app.use('/support', support)
 app.use('/location', location)
+app.get('/dashboard', (req, res, next) => {
+    if (req.isAuthenticated()) {
+      next();
+    } else {
+      res.redirect('/login');
+    }
+})
 app.use('/dashboard', isAuthenticated, dashboard)
 app.use('/login', login)
 app.get('/logout', (req,res) => {
     res.redirect('/login')
 })
+
+
 
 const port = process.env.PORT || 5000;
 const host = process.env.HOST || '0.0.0.0'
