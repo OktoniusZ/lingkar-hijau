@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website that contains special attention to nature">
+    <meta name="dicoding:email" content="kuncoroariadi@gmail.com">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="home-user.css" />
+    <link rel="stylesheet" href="home-user-responsive.css" />
+    <link rel="icon" href="plant-img.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <title>Lingkar Hijau</title>
+    <script src="https://use.fontawesome.com/b070c8f1df.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  </head>
+  <body>
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-content">Skip to content?</a>
+    <header>
+      <!-- Desktop Navbar -->
+      <nav class="navbar">
+        <a class="nav-logo" href="#">Lingkar Hijau</a>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/informationPage">Information</a></li>
+          <li class="nav-item"><a href="/location">Location</a></li>
+          <li class="nav-item"><a href="/supportPage">Support</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navbar -->
+      <nav class="mobile-menu">
+        <div class="icon-menu" id="icon-mobile">
+          <button aria-label="button menu dropdown on mobile device" type="button">
+            <span class="fa fa-bars fa-lg"></span>
+          </button>
+        </div>
+        <div class="mobile-logo" aria-label="mobile-logo">Lingkar Hijau</div>
+      </nav>
+
+      <!-- Mobile Drawer -->
+      <nav id="drawer" class="nav-mobile">
+        <ul class="nav-mob-list">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/informationPage">Information</a></li>
+          <li class="nav-item"><a href="/location">Location</a></li>
+          <li class="nav-item"><a href="/supportPage">Support</a></li>
+        </ul>
+      </nav>
+
+      <!--Jumbotron -->
+      <div class="jumbotron">
+        <div class="jumbotron-title">
+          <h1>Ayo Beraksi!</h1>
+          <p>Lindungi Indonesia untuk tetap hijau dengan mudah dan berkelanjutan,
+            bersama kami wujudkan aksi nyatamu untuk hutan Indonesia!</p>
+        </div>
+        <div class="jumbotron-img">
+          <img src="plant-img.png" alt="Plant Logo">
+        </div>
+      </div>
+    </header>
+
+    <main tabindex="0" id="main-content">
+      <!-- Slogan -->
+      <section class="slogan">
+        <div class="slogan-title">
+          <h2>Bersama Kami Wujudkan Masa Depan Lebih Baik</h2>
+          <p>Saat ini, kebutuhan ruang publik semakain meningkat yang mengakibatkan ditebangnya pohon-pohon untuk dirubah menjadi lingkungan perkotaan. Hal ini dapat berakibat buruk pada keseimbangan ekosisten kita. Oleh karena itu, bergabunglah dengan kami agar kita dapat menghijaukan kembali masa depan generasi selanjutnya.</p>
+        </div>
+        <div class="slogan-icon">
+          <div class="slogan-list-type-one">
+            <img src="tree-icon.png" alt="Tree Icon">
+            <h3>375.5K</h3>
+            <p>Pohon Tertanam</p>
+          </div>
+          <div class="slogan-list-type-two">
+            <img src="location-icon.png" alt="Location Icon">
+            <h3>38</h3>
+            <p>Lokasi</p>
+          </div>
+          <div class="slogan-list-type-two">
+            <img src="volunteer-icon.png" alt="Volunteer Icon">
+            <h3>100.6K</h3>
+            <p>Relawan</p>
+          </div>
+          <div class="slogan-list-type-one">
+            <img src="person-icon.png" alt="Person Icon">
+            <h3>60.5K</h3>
+            <p>Partisipan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section class="intro">
+        <div class="intro-title">
+          <h2>Saling Mengerti, Saling Melindungi</h2>
+        </div>
+        <div class="intro-card-container">
+          <div class="intro-card">
+            <div class="intro-card-img">
+              <img src="seal-question-icon.png" alt="Question Icon">
+            </div>
+            <h3>Apa Itu Lingkar Hijau?</h3>
+            <p>Lingkar Hijau merupakan website penanaman pohon yang diluncurkan dengan tujuan untuk mengedukasi masyarakat akan pentingnya menanam pohon. Selain itu, Lingkar Hijau juga membuka pintu selebar-lebarnya untuk masyarakat yang ingin menanam pohon pada suatu lokasi.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-img">
+              <img src="gear-icon.png" alt="Engine Icon">
+            </div>
+            <h3>Bagaimana Cara Kerja Lingkar Hijau?</h3>
+            <p>Lingkar Hijau bekerja dengan sepenuh hati dalam menanamkan suatu pohon sebagai aksi nyata penghijauan lingkungan. Tidak hanya itu, kami juga selalu memberi informasi terbaru tentang perkembangan pohon yang kami tanam.</p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-img">
+              <img src="person-contact-icon.png" alt="Profile Icon">
+            </div>
+            <h3>Bagaimana Lingkar Hijau Berkontribusi Dalam Penanaman Pohon?</h3>
+            <p>Lingkar Hijau melakukan penanaman pohon secara langsung tanpa adanya pihak ketiga, yang mana kami juga membuka kesempatan untuk masyarakat yang ingin menjadi sukarelawan dalam menanamkan pohon.</p>
+          </div>
+        </div> 
+      </section>
+
+      <!-- List of Tree Types -->
+      <section>
+        <div class="tree">
+          <h2>Macam-macam pohon yang dapat kita tanam dan Manfaatnya</h2>
+          <p>Yuk sebarkan #TanamPohon untuk Indonesia yang lebih cerah!</p>
+          <div class="list" id="list-pohon" draggable="false"></div>
+          <div class="preview-container" id="preview-pohon"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Map Style -->
+    <section class="main-map">
+      <div class="container__map">
+        <h2>Membagi Kebahagian dengan Menanam Pohon</h2>
+        <p>
+          Lingkar Hijau Membagi Kebahagian Untuk Semua, Memberikan Informasi
+          Pohonmu Untuk Indonesia
+        <p>
+        <div class="wrapper">
+          <div id="map" class="map" style="width: 900px; height: 420px"></div>
+          <script>
+            const map = L.map('map').setView([-2.2331, 117.2841], 4.5);
+  
+            const tiles = L.tileLayer(
+              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              {
+                maxZoom: 19,
+                attribution:
+                  '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+              }
+            ).addTo(map);
+            const customIcon = L.icon({
+              iconUrl: 'free_icon_6.svg',
+              iconSize: [50, 45],
+            });
+  
+            const marker_1 = L.marker([-7.628, 108.845], {
+              title: 'Pohon Pinus',
+              icon: customIcon,
+            })
+              .bindPopup(
+                '<b>Pohon Pinus H <br> <br> </b><b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Pantai Ayah, Cilacap, Jawa Tengah '
+              )
+              .addTo(map)
+              .openPopup();
+  
+            const marker_2 = L.marker([-8.4136, 116.4822], {
+              title: 'Pohon Mahoni',
+              icon: customIcon,
+            })
+              .bindPopup(
+                '<b>Pohon Mahoni <br> <br> </b> <b>Habitat :</b> Sub Tropis <br> <b> Lokasi : </b> Hutan Gunung Rinjani,Lombok Timur, West Nusa Tenggara, Indonesia '
+              )
+              .addTo(map)
+              .openPopup();
+  
+            const marker_3 = L.marker([0.49006, 101.45247], {
+              title: 'Pohon Jambu',
+              icon: customIcon,
+            })
+              .bindPopup(
+                '<b>Pohon Jambu <br> <br> </b> <b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Hutan di Kelurahan Tengkerang Tengah, Kampar Regency, Riau'
+              )
+              .addTo(map)
+              .openPopup();
+  
+            const marker_4 = L.marker([-0.8669, 116.9776], {
+              title: 'Pohon Mangga',
+              icon: customIcon,
+            })
+              .bindPopup(
+                '<b>Pohon Mangga <br><br> </b> <b>Habitat :</b> Tropis <br> <b> Lokasi : </b> Taman Hutan Raya Bukit Soeharto, Kutai Kartanegara, Kalimantan Timur '
+              )
+              .addTo(map)
+              .openPopup();
+            function onMapClick(e) {
+              Popup.setLatLng(e.latlng)
+                .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                .openOn(map);
+            }
+  
+            map.on('click', onMapClick);
+          </script>
+        </div>
+        <div class="content__map">
+          <button class="button__map">
+            <a href="/location">
+              Ikuti Proses Kita
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section>
+      <div class="main-form">
+        <div class="contact">
+          <div class="contact-container">
+            <div class="contact-form">
+              <form action="/support" method="post">
+                <h1>Mari Terhubung</h1>
+                <label for="volunteer-name">Nama</label>
+                <input type="text" id="volunteer-name" placeholder="Nama Anda" name="nama" />
+
+                <label for="volunteer-email">Email</label>
+                <input type="text" id="volunteer-email" placeholder="lingkarhijau@gmail.com" name="email" />
+
+                <label for="volunteer-number">No. Hp/Telp</label>
+                <input type="number" id="volunteer-number" placeholder="Nomor telepon Anda" name="nomorHp" />
+                
+                <label for="volunteer-message">Pesan</label>
+                <textarea id="volunteer-message" placeholder="Pesan Anda" rows="4" name="pesan"></textarea>
+                <button type="submit">Kirim Pesan</button>
+              </form>
+            </div>
+            <div class="contact-img">
+              <img src="contact-icon-preview.png" alt="logo-admin" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <!-- Footer Description and Profile -->
+      <div class="footer-main">
+        <div class="footer-title">
+          <a href="#/">Lingkar Hijau</a>
+          <h4>Website Penanaman Pohon</h4>
+          <p>Capstone Project Program Magang dan Studi Independen Bersertifikat Dicoding - Pengembang FrontEnd dan BackEnd Web Batch 4</p>
+        </div>
+        <div class="footer-profile">
+          <h3>Tentang Kami</h3>
+          <div class="footer-profile-card">
+            <div class="footer-profile-member">
+              <img src="profile-one.png" alt="Member One">
+              <p>Kuncoro Ariadi</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="profile-two.png" alt="Member Two">
+              <p>Amalia Nur Izzati</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="profile-three.png" alt="Member Three">
+              <p>Oktonius Z S</p>
+            </div>
+            <div class="footer-profile-member">
+              <img src="profile-four.png" alt="Member Four">
+              <p>Aldo Pradana A</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        <p>Lingkar Hijau © 2023 - made with love</p>
+      </div>
+    </footer>
+
+    <script src="home-user.js"></script>
+  </body>
+</html>
