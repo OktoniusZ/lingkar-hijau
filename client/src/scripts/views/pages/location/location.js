@@ -1,4 +1,4 @@
-const cardMap = document.querySelector('#card_container');
+const cardMap = document.querySelector('#card__desc');
 fetch('/relawan')
     .then((response) => response.json())
     .then((data) => {
