@@ -1,6 +1,7 @@
 // konfigurasi
 const express = require('express')
 const bodyParser = require('body-parser');
+const cookie = require('cookie-session')
 const app = express()
 const path = require('path')
 const mongoose = require('mongoose')
@@ -37,11 +38,18 @@ app.use(express.static(imagesPath));
 app.use(express.static(distPath));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())  
+const expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
 app.use(
     session({
-        secret: 'my secret key',
-        resave: false,
-        saveUninitialized: false,
+       name: 'session',
+       keys: ['key1', 'key2'],
+       cookie: {
+        secure: true,
+        httpOnly: true,
+        domain: 'https://lingkar-hijau-gamma.vercel.app',
+        path: 'foo/bar',
+        expires: expiryDate
+       }
     }),
 )
 
