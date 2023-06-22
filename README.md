@@ -8,5 +8,11 @@ Our Contributor:
 3. Oktonius Zevanya Simanungkalit - [Active]
 4. Aldo Pradana Ariando - [Active]
 
+## Technology
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![HTML5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+
 Check our website here : 
 [Lingkar Hijau](https://lingkar-hijau-gamma.vercel.app/)
